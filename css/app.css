@@ -1,0 +1,34 @@
+﻿body {
+    background-color: bisque;
+}
+
+.main {
+   margin-left: 200px;
+   font-size: medium;
+}
+
+.cell {
+    border: 1px solid;
+    border-radius: 10px;
+    height: 60px;
+    background-color: azure;
+    font-size: 30px;
+    text-align: center;
+}
+
+.message {
+    font-size: large;
+}
+
+.auto {
+    margin-top: 60px;
+    padding-top: 20px;
+    margin-right: 200px;
+    border-style: solid;
+    border-width: 2px;
+    width:inherit;
+}
+
+.startButton {
+    margin-top: 20px;
+}

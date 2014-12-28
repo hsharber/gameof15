@@ -1,0 +1,31 @@
+﻿<div>
+    <h2>{{title}}</h2>
+    <div>
+        <p>
+            The goal of this puzzle is to arrange the board’s tiles from smallest to largest, left to right, top to bottom, with an empty space in board’s bottom-right corner, as in the below.
+        </p>
+
+        <p>
+            Click on any tile that is above, below, or beside the empty space. Those are the only tiles that can move.
+        </p>
+        <p>
+            <b>Select Dimension (3 to 9):</b> <select ng-model="dimension" ng-options="dimension.val for dimension in dimensionRange" ng-change="updateDimension()"></select><br />
+        </p>
+    </div>
+
+
+    <div class="row" ng-repeat="row in model">
+        <div class="col-md-1 cell" ng-repeat="col in row" ng-click="clickTile(col.row, col.column)">{{ col.tile_number | tileDisplay }}</div>
+    </div>
+
+    <div class="message">{{ message }}</div>
+
+    <button class="startButton" ng-click="restart()">Start Over</button>
+
+    <div class="auto">
+        <h3>Can't Wait?</h3>
+        <p>If your Dimension value is 3 or 4, you can use the Auto Complete button to complete the came for you.</p>
+        <button ng-click="autoComplete()">Auto Complete</button>
+    </div>
+
+</div>
